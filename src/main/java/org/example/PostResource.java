@@ -15,21 +15,25 @@ public class PostResource {
                         "    \"job\": \"leader\"\n" +
                         "}";
 
-    Response res = given()
-            .pathParam("value", "users")
-            .header("Content-Type", "application/json") // Set Content-Type header
-            .when().body(payload)
-            .post("https://reqres.in/api/{value}");
+        Response response = given()
+                .pathParam("value", "users")
+                .header("Content-Type", "application/json") // Set Content-Type header
+                .when().body(payload)
+                .log().all()// log().body() print the body ---------log().all() will print request body, header and all meta information
+                .post("https://reqres.in/api/{value}");
         // Extract and print the "name" and "job" from the response
-        String name = res.jsonPath().getString("name");
-        String job = res.jsonPath().getString("job");
-        System.out.println("Name: " + name);
-        System.out.println("Job: " + job);
+        String name = response.jsonPath().getString("name");
+        String job = response.jsonPath().getString("job");
+      /*  System.out.println("Name: " + name);
+        System.out.println("Job: " + job);*/
 
-        System.out.println(res.getStatusCode());
-        System.out.println("  = "+res.getBody().
+        System.out.println(response.getStatusCode());
+        // System.out.println("  = "+response.getBody().asPrettyString());
 
-    asPrettyString());
 
-}
+        /*ASSERTIONS*/
+        //System.out.println("job = " + response.jsonPath().getMap("$")); //"$" refers to the root of the JSON response., but we are in https://reqres.in/api/users , but after sneding the post call it return the resource created,getMap("$") correctly retrieves that single resource.
+        System.out.println("job = " + response.jsonPath().getString("name"));
+
+    }
 }
