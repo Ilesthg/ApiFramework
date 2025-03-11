@@ -1,7 +1,5 @@
-package org.example;
+package org.ExampleReqres;
 
-import io.restassured.http.Header;
-import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 

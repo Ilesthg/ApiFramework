@@ -6,10 +6,14 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import org.testng.reporters.Files;
 import resources.utilities.faker.FakerBusinessClass;
+import resources.utilities.faker.FakerServiceClass;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
 
 
 public class PostReqExternalFile {
@@ -20,7 +24,8 @@ public class PostReqExternalFile {
 
         String a =Files.readFile(new File(System.getProperty("user.dir") + "/src/main/java/example2/request.json"))
                 .replace("title1" , FakerBusinessClass.generatetTitle())
-        .replace("id1", String.valueOf(FakerBusinessClass.generateID()));
+                .replace("id1", String.valueOf(FakerBusinessClass.generateID()))
+                .replace("views1", String.valueOf(FakerBusinessClass.generateViews()));
 
 
         Response response = given()
@@ -32,7 +37,9 @@ public class PostReqExternalFile {
                 //.queryParam("users" , "/users")
                 .post();
         response.prettyPrint();
-        response.getStatusCode();
+      HashMap<String, Object>  hm=  response.getBody().jsonPath().getJsonObject("$");
+        System.out.println("b.size() = " + hm);
 
     }
+
 }

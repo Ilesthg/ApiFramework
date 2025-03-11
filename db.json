@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": "48",
+      "name": "Alice",
+      "title": "King Jellybean",
+      "views": "8",
+      "jobs": [
+        "job2",
+        "job3"
+      ],
+      "books": {
+        "ISBN": 845842,
+        "year": 2007,
+        "author": "Victor Gonzalez"
+      }
+    },
+    {
+      "id": "46",
+      "name": "Pedro",
+      "title": "Tiny Rick",
+      "views": "8",
+      "jobs": [
+        "job2",
+        "job3"
+      ],
+      "books": {
+        "ISBN": 66871,
+        "year": 2015,
+        "author": "Armando Gonzalez"
+      }
+    },
+    {
+      "id": "68",
+      "name": "Luis",
+      "title": "Tinkles",
+      "views": "4",
+      "jobs": [
+        "job2",
+        "job3"
+      ],
+      "books": {
+        "ISBN": 55412,
+        "year": 2010,
+        "author": "Julianna Gastelum"
+      }
+    },
+    {
+      "id": 46,
+      "name": "com.github.javafaker.Name@7b69c6ba",
+      "title": "Tiny Rick",
+      "views": "3",
+      "jobs": [
+        "j1",
+        "j2"
+      ],
+      "books": {
+        "isbn": 64,
+        "year": 69,
+        "author": "com.github.javafaker.Name@7b69c6ba"
+      }
+    },
+    {
+      "id": 55,
+      "name": "Dr. Doreen Senger",
+      "title": "Revolio 'Gearhead' Clockberg, Jr.",
+      "views": "1",
+      "jobs": [
+        "j1",
+        "j2"
+      ],
+      "books": {
+        "isbn": 70,
+        "year": 89,
+        "author": "Madeleine Heaney"
+      }
+    }
+  ]
+}
