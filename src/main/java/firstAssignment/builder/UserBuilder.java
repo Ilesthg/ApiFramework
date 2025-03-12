@@ -3,12 +3,12 @@ package firstAssignment.builder;
 import java.util.List;
 
 public class UserBuilder {
-    private int id;
-    private String name;
-    private String title;
-    private String views;
-    private List<String> jobs;
-    private Books book;
+    int id;
+    String name;
+    String title;
+    String views;
+    /*private*/ List<String> jobs;
+    /*private*/ Books book;
 
     public UserBuilder(int id) { // Mandatory field
         this.id = id;
@@ -39,9 +39,9 @@ public class UserBuilder {
         return this;
     }
 
-   /* public Users build() {
+    public Users build() {
         return new Users(this);
-    }*/
+    }
 }
 
 

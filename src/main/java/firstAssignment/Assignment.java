@@ -1,10 +1,14 @@
 package firstAssignment;
 
 import firstAssignment.builder.Books;
+import firstAssignment.builder.UserBuilder;
+import firstAssignment.builder.Users;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -33,7 +37,16 @@ public class Assignment {
     @Test
     public void postCallPojo(){
         Books book = new Books(generateID(),generateYear(),generateName());
-        //Users user = new Users(generateID(),generateName(),generatetTitle(),generateViews(),Arrays.asList("j1", "j2"),book);
+        /*
+        Users user = new Users(generateID(),generateName(),generatetTitle(),generateViews(),Arrays.asList("j1", "j2"),book);
+*/
+        Users user = new UserBuilder(generateID())
+                .setBook(book)
+                .setJobs(Arrays.asList("j1", "j2"))
+                .setName(generateName())
+                .setTitle(generatetTitle())
+                .setViews(generateViews()).build();
+
 
         Response response = given()
                 .baseUri("http://localhost:3000/users")
@@ -44,6 +57,8 @@ public class Assignment {
                 .post();
         response.then().statusCode(201);
         response.prettyPrint();
+
+        response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(new File("src/main/resources/schema.json")));
 
     }
 }

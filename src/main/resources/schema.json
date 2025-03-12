@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "views": {
+      "type": "string"
+    },
+    "jobs": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "books": {
+      "type": "object",
+      "properties": {
+        "ISBN": {
+          "type": "integer"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "author": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ISBN",
+        "year",
+        "author"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "title",
+    "views",
+    "jobs",
+    "books"
+  ]
+}

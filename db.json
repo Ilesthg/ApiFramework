@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": 46,
+      "id": "46",
       "name": "com.github.javafaker.Name@7b69c6ba",
       "title": "Tiny Rick",
       "views": "3",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": 55,
+      "id": "55",
       "name": "Dr. Doreen Senger",
       "title": "Revolio 'Gearhead' Clockberg, Jr.",
       "views": "1",
@@ -73,6 +73,51 @@
         "isbn": 70,
         "year": 89,
         "author": "Madeleine Heaney"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Ms. Mitsue Wyman",
+      "title": "Unity",
+      "views": "4",
+      "jobs": [
+        "j1",
+        "j2"
+      ],
+      "book": {
+        "isbn": 41,
+        "year": 105,
+        "author": "Rosalind Satterfield"
+      }
+    },
+    {
+      "id": 48,
+      "name": "Stewart Hintz",
+      "title": "Tammy Gueterman",
+      "views": "1",
+      "jobs": [
+        "j1",
+        "j2"
+      ],
+      "book": {
+        "isbn": 12,
+        "year": 74,
+        "author": "Robbie Bradtke"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Elvin Reynolds I",
+      "title": "Tiny Rick",
+      "views": "1",
+      "jobs": [
+        "j1",
+        "j2"
+      ],
+      "book": {
+        "isbn": 23,
+        "year": 66,
+        "author": "Tobi O'Conner"
       }
     }
   ]

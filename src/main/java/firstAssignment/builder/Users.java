@@ -8,12 +8,12 @@ import java.util.List;
 public final class Users {
 
 
-    private int id;
-    private String name;
-    private String title;
-    private String views;
-    private List<String> jobs;
-    private Books books;
+    private  int id;
+    private  String name;
+    private  String title;
+    private   String views;
+    private   List<String> jobs;
+    private  Books books;
 
 
 /*    public Users(int id, String name, String title, String views, List<String> jobs, Books books) {
@@ -37,7 +37,7 @@ public final class Users {
         this.books = new Books(18, 12547, "Perez");
 
     }*/
-    private Users(UserBuilder builder) {
+     Users(UserBuilder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.title = builder.title;
@@ -53,7 +53,10 @@ public final class Users {
     public String getViews() { return views; }
     public List<String> getJobs() { return jobs; }
     public Books getBook() { return books; }
-
-
+    @Override
+    public String toString() {
+        return "Users{id=" + id + ", name='" + name + "', title='" + title +
+                "', views='" + views + "', jobs=" + jobs + ", book=" + books + "}";
+    }
 
 }
