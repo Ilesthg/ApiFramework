@@ -4,121 +4,108 @@
       "id": "48",
       "name": "Alice",
       "title": "King Jellybean",
-      "views": "8",
+      "views": 565,
       "jobs": [
         "job2",
         "job3"
       ],
-      "books": {
-        "ISBN": 845842,
-        "year": 2007,
-        "author": "Victor Gonzalez"
-      }
+      "books": [
+        {
+          "isbn": 845842,
+          "year": 2007,
+          "author": "Victor Gonzalez"
+        }
+      ]
     },
     {
-      "id": "46",
-      "name": "Pedro",
-      "title": "Tiny Rick",
-      "views": "8",
-      "jobs": [
-        "job2",
-        "job3"
-      ],
-      "books": {
-        "ISBN": 66871,
-        "year": 2015,
-        "author": "Armando Gonzalez"
-      }
-    },
-    {
-      "id": "68",
-      "name": "Luis",
-      "title": "Tinkles",
-      "views": "4",
-      "jobs": [
-        "job2",
-        "job3"
-      ],
-      "books": {
-        "ISBN": 55412,
-        "year": 2010,
-        "author": "Julianna Gastelum"
-      }
-    },
-    {
-      "id": "46",
-      "name": "com.github.javafaker.Name@7b69c6ba",
-      "title": "Tiny Rick",
-      "views": "3",
+      "id": "49",
+      "name": "Carroll Stiedemann",
+      "title": "Mr. Meeseeks",
+      "views": 58,
       "jobs": [
         "j1",
         "j2"
       ],
-      "books": {
-        "isbn": 64,
-        "year": 69,
-        "author": "com.github.javafaker.Name@7b69c6ba"
-      }
+      "books": [
+        {
+          "isbn": 58,
+          "year": 99,
+          "author": "Estelle Labadie"
+        },
+        {
+          "isbn": 4,
+          "year": 1999,
+          "author": "Edfdie"
+        }
+      ]
     },
     {
-      "id": "55",
-      "name": "Dr. Doreen Senger",
-      "title": "Revolio 'Gearhead' Clockberg, Jr.",
-      "views": "1",
+      "id": "65",
+      "name": "Hillary Murphy",
+      "title": "Shrimply Pibbles",
+      "views": 7,
       "jobs": [
         "j1",
         "j2"
       ],
-      "books": {
-        "isbn": 70,
-        "year": 89,
-        "author": "Madeleine Heaney"
-      }
+      "books": [
+        {
+          "isbn": 14,
+          "year": 82,
+          "author": "Dr. Fleta Keebler"
+        }
+      ]
     },
     {
-      "id": 6,
-      "name": "Ms. Mitsue Wyman",
-      "title": "Unity",
-      "views": "4",
+      "id": "56",
+      "name": "Liane Kris",
+      "title": "Rick Sanchez",
+      "views": 1,
       "jobs": [
         "j1",
         "j2"
       ],
-      "book": {
-        "isbn": 41,
-        "year": 105,
-        "author": "Rosalind Satterfield"
-      }
+      "books": [
+        {
+          "isbn": 57,
+          "year": 88,
+          "author": "Mrs. Leslee Denesik"
+        }
+      ]
     },
     {
-      "id": 48,
-      "name": "Stewart Hintz",
-      "title": "Tammy Gueterman",
-      "views": "1",
+      "id": "24",
+      "name": "Sabine Hyatt",
+      "title": "Gazorpazorpfield",
+      "views": 3,
       "jobs": [
         "j1",
         "j2"
       ],
-      "book": {
-        "isbn": 12,
-        "year": 74,
-        "author": "Robbie Bradtke"
-      }
+      "books": [
+        {
+          "isbn": 20,
+          "year": 87,
+          "author": "Leora Blanda"
+        }
+      ]
     },
     {
-      "id": 20,
-      "name": "Elvin Reynolds I",
-      "title": "Tiny Rick",
-      "views": "1",
+      "id": "31",
+      "name": "NewName",
+      "title": "Loggins",
+      "views": 5,
       "jobs": [
         "j1",
         "j2"
       ],
-      "book": {
-        "isbn": 23,
-        "year": 66,
-        "author": "Tobi O'Conner"
-      }
+      "books": [
+        {
+          "isbn": 23,
+          "year": 73,
+          "author": "Kisha Aufderhar"
+        }
+      ]
     }
   ]
 }

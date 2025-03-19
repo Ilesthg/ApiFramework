@@ -3,7 +3,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "type": "string"
+      "type": "integer"
     },
     "name": {
       "type": "string"
@@ -25,10 +25,10 @@
         }
       ]
     },
-    "books": {
+    "book": {
       "type": "object",
       "properties": {
-        "ISBN": {
+        "isbn": {
           "type": "integer"
         },
         "year": {
@@ -39,7 +39,7 @@
         }
       },
       "required": [
-        "ISBN",
+        "isbn",
         "year",
         "author"
       ]
@@ -51,6 +51,6 @@
     "title",
     "views",
     "jobs",
-    "books"
+    "book"
   ]
 }

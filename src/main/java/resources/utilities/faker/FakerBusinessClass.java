@@ -5,11 +5,14 @@ public final class FakerBusinessClass {
         return FakerServiceClass.generateRandomCharacter();
     }
 
-    public static int generateID() {
+    public static String generateID() {
         return FakerServiceClass.generateRandomID(3, 80);
     }
+    public static int generateISBN() {
+        return FakerServiceClass.generateRandomisbn(3, 80);
+    }
 
-    public static String generateViews() {
+    public static int generateViews() {
         return FakerServiceClass.generateRandom();
     }
     public static int generateYear() {
