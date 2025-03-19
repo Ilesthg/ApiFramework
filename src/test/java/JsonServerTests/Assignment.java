@@ -1,4 +1,4 @@
-package firstAssignment;
+package JsonServerTests;
 
 import com.google.gson.Gson;
 import firstAssignment.builder.Book;
@@ -9,18 +9,20 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static resources.utilities.faker.FakerBusinessClass.*;
 
-public class Assignment {
+public class Assignment extends BaseTestC {
     int siezeOfArrayFirstGet;
     static UserBuilder userBPost;
     User userPostDesiarilizatedId;
     String idPostReq;
 
-   // @Test(priority = 1)
+     @Test(priority = 1)
     public void getCall() throws IOException {
 
 
@@ -40,9 +42,9 @@ public class Assignment {
 
     @Test(priority = 2)
     public void postCallPojo() {
-       // Book book = new Book(generateID(), generateYear(), generateName());
+        // Book book = new Book(generateID(), generateYear(), generateName());
 
-      Book book = Book.BookBuilder.builder().setIsbn(generateISBN()).setAuthor(generateName()).setYear(generateYear()).build();
+        Book book = Book.BookBuilder.builder().setIsbn(generateISBN()).setAuthor(generateName()).setYear(generateYear()).build();
 
         List<Book> bookList = new ArrayList<>();
         bookList.add(book);
@@ -68,12 +70,12 @@ public class Assignment {
                 //.log().all()
                 .post();
         response.then().statusCode(201);
-    // response.prettyPrint();
+        // response.prettyPrint();
 
 
-      //  response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(new File("src/main/resources/schema.json")));
+        //  response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(new File("src/main/resources/schema.json")));
 
-       //deserialization with gson
+        //deserialization with gson
         Gson gson = new Gson();
         userPostDesiarilizatedId = gson.fromJson(response.asString(), User.class);
         System.out.println("user3.getName() = " + userPostDesiarilizatedId.getName());
@@ -103,21 +105,21 @@ public class Assignment {
         Assert.assertEquals((siezeOfArrayFirstGet+1) ,siezeOfArraySecondtGet);*/
     }
 
-   @Test(priority = 4)
+    @Test(priority = 4)
     public void updateCall() throws IOException {
         System.out.println("--------UPDATE CALL--------");
      /*  userBPost.setName("assdasdas");
       User user2 = userBPost.build();
        System.out.println("user2-2 = " + user2);
 */
-       User updatedUser = UserBuilder.builder()
-               .setId(userPostDesiarilizatedId.getId())  // Get original ID
-               .setName("NewName")   // Modify the name
-               .setTitle(userPostDesiarilizatedId.getTitle())  // Copy the original values
-               .setViews(userPostDesiarilizatedId.getViews())
-               .setJobs(userPostDesiarilizatedId.getJobs())
-               .setBook(userPostDesiarilizatedId.getBooks())
-               .build();
+        User updatedUser = UserBuilder.builder()
+                .setId(userPostDesiarilizatedId.getId())  // Get original ID
+                .setName("NewName")   // Modify the name
+                .setTitle(userPostDesiarilizatedId.getTitle())  // Copy the original values
+                .setViews(userPostDesiarilizatedId.getViews())
+                .setJobs(userPostDesiarilizatedId.getJobs())
+                .setBook(userPostDesiarilizatedId.getBooks())
+                .build();
 
 
 
@@ -128,11 +130,11 @@ public class Assignment {
                 .contentType(ContentType.JSON)
                 .when()
                 .body(updatedUser)
-              //  .queryParam("id",  userS.getId())
+                //  .queryParam("id",  userS.getId())
                 .put("/" + updatedUser.getId());
-           //  System.out.println("user2 get id" + userS.getId());
+        //  System.out.println("user2 get id" + userS.getId());
 
-             response.prettyPrint();
+        response.prettyPrint();
 
 
 
