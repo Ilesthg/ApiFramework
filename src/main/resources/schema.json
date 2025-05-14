@@ -3,7 +3,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "type": "integer"
+      "type": "string"
     },
     "name": {
       "type": "string"
@@ -12,7 +12,7 @@
       "type": "string"
     },
     "views": {
-      "type": "string"
+      "type": "integer"
     },
     "jobs": {
       "type": "array",
@@ -25,23 +25,28 @@
         }
       ]
     },
-    "book": {
-      "type": "object",
-      "properties": {
-        "isbn": {
-          "type": "integer"
-        },
-        "year": {
-          "type": "integer"
-        },
-        "author": {
-          "type": "string"
+    "books": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "isbn": {
+              "type": "integer"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "author": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "isbn",
+            "year",
+            "author"
+          ]
         }
-      },
-      "required": [
-        "isbn",
-        "year",
-        "author"
       ]
     }
   },
@@ -51,6 +56,6 @@
     "title",
     "views",
     "jobs",
-    "book"
+    "books"
   ]
 }

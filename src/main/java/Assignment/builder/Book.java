@@ -1,4 +1,4 @@
-package firstAssignment.builder;
+package Assignment.builder;
 
 public class Book {
 

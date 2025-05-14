@@ -1,14 +1,12 @@
-package example2;
+package ExternalJsonFile;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import resources.utilities.faker.FakerBusinessClass;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.*;
@@ -19,7 +17,7 @@ public class SaveRequestExternalFile {
     public void saveRequestExternalFile() throws IOException {
 
 
-        String requestBody = new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir") + "/src/main/java/example2/request.json")))
+        String requestBody = new String(Files.readAllBytes(Paths.get(System.getProperty("user.dir") + "/src/main/java/ExternalJsonFile/request.json")))
                 .replace("title1", FakerBusinessClass.generatetTitle())
                 .replace("id1", String.valueOf(FakerBusinessClass.generateID()));
 

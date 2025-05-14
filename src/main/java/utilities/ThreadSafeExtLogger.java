@@ -16,7 +16,7 @@ public final class ThreadSafeExtLogger {
 
     private static ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
 
-    public  ExtentTest getExtTest() { //remove public and create Manager
+       ExtentTest getExtTest() { //remove public and create Manager
         return extentTestThreadLocal.get();
     }
 

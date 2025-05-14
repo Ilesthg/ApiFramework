@@ -1,4 +1,4 @@
-package org.ExampleReqres;
+package ExampleReqres;
 
 import io.restassured.http.Header;
 import io.restassured.http.Headers;

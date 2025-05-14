@@ -10,10 +10,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import utilities.ExtManager;
 import utilities.ExtReport;
 import utilities.ThreadSafeExtLogger;
-
-import java.lang.reflect.Method;
 
 public class BaseTestC {
  private    ExtentReports extReport;
@@ -31,12 +30,12 @@ public class BaseTestC {
     public void afterMethod(ITestResult result) {
 
         if (result.getStatus() == ITestResult.FAILURE) {
-            ThreadSafeExtLogger.getInstance().getExtTest().log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test case failed", ExtentColor.RED));
-            ThreadSafeExtLogger.getInstance().getExtTest().log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test case failed", ExtentColor.RED));
+           ExtManager.logResponse(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test case failed", ExtentColor.RED));
+            ExtManager.logResponse(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test case failed", ExtentColor.RED));
         } else if (result.getStatus() == ITestResult.SKIP) {
-            ThreadSafeExtLogger.getInstance().getExtTest().log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test case Skipped", ExtentColor.ORANGE));
+            ExtManager.logResponse(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test case Skipped", ExtentColor.ORANGE));
         } else if (result.getStatus() == ITestResult.SUCCESS) {
-            ThreadSafeExtLogger.getInstance().getExtTest().log(Status.PASS, MarkupHelper.createLabel(result.getName() + " - Test case SUCCESS", ExtentColor.GREEN));
+            ExtManager.logResponse(Status.PASS, MarkupHelper.createLabel(result.getName() + " - Test case SUCCESS", ExtentColor.GREEN));
             //logger.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " - Test case SUCCESS", ExtentColor.GREEN));
         }
 
