@@ -23,19 +23,19 @@ public class FirstEndpoint {
     @Test
     public void test2() {
         Response response =
-        given()
+        given().header("x-api-key","reqres-free-v1")
                 .get("https://reqres.in/api/users");
                 //.then().extract().response();
 
         response.prettyPrint(); // to print the response
          Headers header =   response.getHeaders();
 
-        for (Header head: header) {
+     /*   for (Header head: header) {
            //  System.out.println("head = " + head);
             System.out.println("header name = " + head.getName());
             System.out.println("header value = " + head.getValue());
 
-        }
+        }*/
 
         System.out.println(  header.get("Content-Type"));
 
